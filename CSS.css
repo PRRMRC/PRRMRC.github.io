@@ -1,90 +1,9 @@
+/* === FONTS === */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-a {
-  color: inherit;
-}
-html {
-  margin: 0;
-  height: 100%;
-  scroll-behavior: smooth;
-    flex-direction: column;
-    position: relative;
-    padding-left: 0px;
-    padding-top: 50px;
-    width: auto;
-    align-self: stretch;
-    font-family: 'Noto Sans', sans-serif;
-  }
 
-body {
-  margin: 0;
-  height: 100%;
-  scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-left: 0px;
-  padding-top: 50px;
-  width: auto;
-  align-self: stretch;
-  font-family: 'Noto Sans', sans-serif;
-   
-}
 
-#light {
-  border-radius: 25px;
-  background-color: rgb(243, 243, 243);
-  padding: 25px; 
-}
-
-#dark {
-  border-radius: 25px;
-  background-color: rgb(37, 37, 38);
-  padding: 25px; 
-}
-
-#bold {
- font-size: 2.5rem;
-}
-
-#shortcut {
-  justify-content: center;
-  padding-top: 10px;
-  padding: 25px;
-}
-
-#lights {
-  font-size: 2em;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: rgb(255, 255, 255);
-}
-
-#shadowlight {
-  background-color: rgb(238, 238, 238);
-  border-radius: 25px;
-  padding-bottom: 10px;
-  width: 52%;
-}
-
-#darks {
-  font-size: 2em;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: rgb(52, 52, 53);
-}
-
-#shadowdark {
-  background-color: rgb(22, 22, 23);
-  border-radius: 25px;
-  padding-bottom: 10px;
-  width: 52%;
-}
-
-input {
-  cursor: pointer;
-}
+/* === VARIABLE === */
 
 :root {
   --c-light-text:  #000;
@@ -92,6 +11,39 @@ input {
   linear-gradient( #fff, #fff);
   --c-dark-text: #fff;
   --c-dark-background:url("Msfondo.svg") repeat, linear-gradient( #1e1e1e,#1e1e1e);
+  --variable1: 2.5rem;
+  --variable2: .5rem;
+  --variable3: 25px;
+  --variable4: 5px;
+  --font-size: 1rem;
+  --h1-font-size: 2.75rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1rem;
+  --variable5: 52%;
+}
+
+
+/* === LIGHT THEME === */
+
+#light {
+  border-radius: var(--variable1);
+  background-color: rgb(243, 243, 243);
+  padding: var(--variable1);
+}
+
+#lights {
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+  border-radius: var(--variable2);
+  padding: var(--variable2);
+  background-color: rgb(255, 255, 255);
+}
+
+#shadowlight {
+  background-color: rgb(238, 238, 238);
+  border-radius: var(--variable1);
+  padding-bottom: 1rem;
+  width: var(--variable5);
 }
 
 .theme-light {
@@ -101,11 +53,159 @@ input {
   background: var(--c-background);
 }
 
+
+/* === DARK THEME === */
+
+#darks {
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: var(--variable4);
+  padding: var(--variable4);
+  background-color: rgb(52, 52, 53);
+}
+
+#dark {
+  border-radius: var(--variable3);
+  background-color: rgb(37, 37, 38);
+  padding: var(--variable3); 
+}
+
+#shadowdark {
+  background-color: rgb(22, 22, 23);
+  border-radius: var(--variable1);
+  padding-bottom: 1rem;
+  width: var(--variable5);
+}
+
 .theme-dark {
   --c-text: var(--c-dark-text);
   --c-background: var(--c-dark-background);
   color: var(--c-text);
   background: var(--c-background);
+}
+
+/* === SIZE === */
+
+@media screen and (max-width:1920px)
+   {
+     :root 
+     {
+      --variable1: 2.5rem;
+      --variable2: .5rem;
+      --variable3: 25px;
+      --variable4: 5px;
+      --variable5: 52%;
+      --h1-font-size: 2.75rem;
+      --h2-font-size: 2rem;
+      --h3-font-size: 1rem;
+     }
+   }
+
+   @media screen and (max-width:1233px) {
+    :root 
+    {
+      --variable2: .4rem;
+      --font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (max-width:1227px) {
+    :root 
+    {
+      --variable2: .1rem;
+    }
+  }
+
+  @media screen and (max-width:891px) {
+    :root 
+    {
+      --h1-font-size: 2.25rem;
+    }
+  }
+
+  @media screen and (max-width:762px) {
+    :root 
+    {
+      --h1-font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width:700px) {
+    :root 
+    {
+      --h1-font-size: 1.55rem;
+    }
+  }
+
+  @media screen and (max-width:585px) {
+    :root 
+    {
+      --h1-font-size: 1.15rem;
+      --variable1: 1rem;
+      --font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width:480px) {
+    :root 
+    {
+      --h1-font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width:440px) {
+    :root 
+    {
+      --h1-font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width:400px) {
+    :root 
+    {
+      --h1-font-size: 0.4rem;
+      --variable1: 0.1rem;
+      --font-size: 0.7rem;
+    }
+  }
+  
+
+/* STUFF */
+a {
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+}
+
+html {
+  font-family: 'Noto Sans', sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 0px;
+  width: auto;
+  align-self: stretch;
+}
+
+#bold {
+ font-size: var(--h2-font-size);
+}
+
+#shortcut {
+  justify-content: center;
+  padding-top: 1rem;
+  padding: var(--variable1);
+}
+
+input {
+  cursor: pointer;
 }
 
 a {
@@ -117,13 +217,13 @@ a {
 }
 
 .small {
-  font-size: 50px !important;
-  width: 0% !important;
-  border-radius: 8px !important;
+  font-size: var(--h1-font-size) !important;
+  display:inline-block !important;
+  border-radius: .8rem !important;
 }
 
 .link {
-  font-size: 15px  !important;
+  font-size: var(--h3-font-size)  !important;
   width: 1% !important;
-  border-radius: 4px !important;
+  border-radius: .4rem !important;
 }

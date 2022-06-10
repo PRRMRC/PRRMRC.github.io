@@ -14,10 +14,12 @@
   --variable6: 1rem;
   --variable7: 50px;
   --variable8: 4.75vh;
+  --variable9: 100%;
   --color1: #fff;
   --color2: #000;
+  --color-background1: #fff;
   --theme-text: var(--color2);
-  --theme-background:url("Csfondo.svg") repeat, var(--color1);
+  --theme-img-background: url("Csfondo.svg") repeat, var(--color-background1);
   --theme-card: rgb(243, 243, 243);
   --theme-shadow-card: rgb(238, 238, 238);
   --theme-emoji: "☀️";
@@ -27,7 +29,7 @@
   --h2-font-size: var(--variable8);
   --h3-font-size: 2vh;
   --size-card: 100%;
-  --center: 12%;
+  --center: 10%;
 }
 
 #card {
@@ -55,10 +57,12 @@
 
 .theme {
   color: var(--theme-text);
-  background: var(--theme-background);
   padding-top: var(--variable7);
-  padding-left: var(--center) !important;
-  padding-right: var(--center) !important;
+  padding-left: var(--center);
+  padding-right: var(--center);
+  height: 100%;
+  width: 100%;
+  backdrop-filter: saturate(var(--variable9));
 }
 
 .emoji {
@@ -74,11 +78,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --theme-text: var(--color1); 
-    --theme-background:url("Msfondo.svg") repeat, #1e1e1e;
+    --color-background1: #1e1e1e;
     --theme-card: rgb(37, 37, 38);
     --theme-shadow-card: rgb(22, 22, 23);
     --theme-emoji: "🌕";
     --theme-backlighting: rgb(52, 52, 53);
+    --variable9: 0%;
   }
 }
 /* === SIZE === */
@@ -100,8 +105,7 @@ a {
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
   font-size: var(--font-size);
 }
 
@@ -114,6 +118,18 @@ html {
   position: relative;
   width: auto;
   align-self: stretch;
+  background: var(--theme-img-background);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 #bold {
@@ -151,6 +167,5 @@ a {
 }
 
 div {
-  /* Line space*/
   padding-bottom: 10px;
 }

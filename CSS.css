@@ -5,98 +5,82 @@
 
 /* === VARIABLE === */
 
-:root {
-  --c-light-text:  #000;
-  --c-light-background:url("Csfondo.svg") repeat,
-  linear-gradient( #fff, #fff);
-  --c-dark-text: #fff;
-  --c-dark-background:url("Msfondo.svg") repeat, linear-gradient( #1e1e1e,#1e1e1e);
+:root { /* === LIGHT THEME === */
   --variable1: 2.5vh;
   --variable2: .5vh;
   --variable3: 25px;
   --variable4: 5px;
-  --font-size: 2vh;
-  --h1-font-size: 4.75vh;
-  --h2-font-size: 4.75vh;
-  --h3-font-size: 2vh;
   --variable5: 82%;
+  --variable6: 1rem;
+  --variable7: 50px;
+  --variable8: 4.75vh;
+  --color1: #fff;
+  --color2: #000;
+  --theme-text: var(--color2);
+  --theme-background:url("Csfondo.svg") repeat, var(--color1);
+  --theme-card: rgb(243, 243, 243);
+  --theme-shadow-card: rgb(238, 238, 238);
+  --theme-emoji: "☀️";
+  --theme-backlighting: var(--color1);
+  --font-size: 2vh;
+  --h1-font-size: var(--variable8);
+  --h2-font-size: var(--variable8);
+  --h3-font-size: 2vh;
   --size-card: 100%;
   --center: 12%;
 }
 
-
-/* === LIGHT THEME === */
-
-#light {
+#card {
   border-radius: var(--variable1);
   padding: var(--variable1);
-  background-color: rgb(243, 243, 243);
+  background-color: var(--theme-card);
 }
 
-#lights {
+#backlighting {
   font-size: var(--h2-font-size);
   cursor: pointer;
   border-radius: var(--variable2);
   padding: var(--variable2);
-  background-color: rgb(255, 255, 255);
+  background: var(--theme-backlighting);
 }
 
-#shadowlight {
-  background-color: rgb(238, 238, 238);
+#shadow {
+  background-color: var(--theme-shadow-card);
   border-radius: var(--variable1);
-  padding-bottom: 1rem;
+  padding-bottom: var(--variable6);
   width: var(--variable5);
   text-align: center;
   width: var(--size-card);
 }
 
-.theme-light {
-  --c-text: var(--c-light-text);
-  --c-background: var(--c-light-background);
-  color: var(--c-text);
-  background: var(--c-background);
-  padding-top: 50px;
+.theme {
+  color: var(--theme-text);
+  background: var(--theme-background);
+  padding-top: var(--variable7);
   padding-left: var(--center) !important;
   padding-right: var(--center) !important;
-  
 }
 
-
-/* === DARK THEME === */
-
-#darks {
+.emoji {
   font-size: var(--h2-font-size);
-  cursor: pointer;
-  border-radius: var(--variable2);
-  padding: var(--variable2);
-  background-color: rgb(52, 52, 53);
 }
 
-#dark {
-  border-radius: var(--variable1);
-  padding: var(--variable1);
-  background-color: rgb(37, 37, 38);
+.emoji:after {
+  content: var(--theme-emoji);
 }
 
-#shadowdark {
-  background-color: rgb(22, 22, 23);
-  border-radius: var(--variable1);
-  padding-bottom: 1rem;
-  width: var(--variable5);
-  text-align: center;
-  width: var(--size-card);
-}
+/* == DARK THEME == */
 
-.theme-dark {
-  --c-text: var(--c-dark-text);
-  --c-background: var(--c-dark-background);
-  color: var(--c-text);
-  background: var(--c-background);
-  padding-top: 50px;
-  padding-left: var(--center) !important;
-  padding-right: var(--center) !important;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-text: var(--color1); 
+    --theme-background:url("Msfondo.svg") repeat, #1e1e1e;
+    --theme-card: rgb(37, 37, 38);
+    --theme-shadow-card: rgb(22, 22, 23);
+    --theme-emoji: "🌕";
+    --theme-backlighting: rgb(52, 52, 53);
+  }
 }
-
 /* === SIZE === */
 
   @media screen and (max-width:413px) {
@@ -148,7 +132,6 @@ input {
 a {
   text-decoration:none;
   font-weight: bold;
-  
 }
 
 #project {

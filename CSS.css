@@ -29,7 +29,7 @@
   --h2-font-size: var(--variable8);
   --h3-font-size: 2vh;
   --size-card: 100%;
-  --center: 10%;
+  --center: 0%;
 }
 
 #card {
@@ -49,21 +49,23 @@
 #shadow {
   background-color: var(--theme-shadow-card);
   border-radius: var(--variable1);
-  padding-bottom: var(--variable6);
-  width: var(--variable5);
   text-align: center;
-  width: var(--size-card);
+  position: absolute;
+  top: var(--variable7);
+  left: var(--center);
+  right: var(--center);
+  color: var(--theme-text);
+  position: absolute;
+  left: 75.5%;
+  margin-left:-49.2vw;
+  width:50vw;
 }
 
 .theme {
-  color: var(--theme-text);
-  padding-top: var(--variable7);
-  padding-left: var(--center);
-  padding-right: var(--center);
   height: 100%;
   width: 100%;
-  backdrop-filter: saturate(var(--variable9));
-  -webkit-backdrop-filter: saturate(var(--variable9));
+  background: var(--theme-img-background);
+  filter: saturate(var(--variable9));
 }
 
 .emoji {
@@ -92,9 +94,20 @@
   @media screen and (max-width:413px) {
     :root 
     {
-      --h1-font-size: 3.8vh;
-      --h2-font-size: 3.8vh;
-      --font-size: 2vh;
+      --h1-font-size: 4vw;
+      --h2-font-size: 4vw;
+      --h3-font-size: 2.2vw;
+      --font-size: 4vw;
+    }
+  }
+  
+  @media screen and (max-width:200px) {
+    :root 
+    {
+      --h1-font-size: 1vh;
+      --h2-font-size: 1vh;
+      --h3-font-size: .5vh;
+      --font-size: .5vh;
     }
   } 
   
@@ -119,7 +132,6 @@ html {
   position: relative;
   width: auto;
   align-self: stretch;
-  background: var(--theme-img-background);
 }
 
 html,
@@ -168,5 +180,7 @@ a {
 }
 
 div {
+  /* Line space*/
   padding-bottom: 10px;
 }
+

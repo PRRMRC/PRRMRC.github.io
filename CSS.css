@@ -89,13 +89,24 @@
     --variable9: 0%;
   }
 }
+
 /* === SIZE === */
 
   @media screen and (max-width:413px) {
     :root 
     {
-      --h1-font-size: 4vw;
-      --h2-font-size: 4vw;
+      --h1-font-size: 4vh;
+      --h2-font-size: 4vh;
+      --h3-font-size: 2.2vw;
+      --font-size: 4vw;
+    }
+  }
+
+  @media screen and (max-width:290px) {
+    :root 
+    {
+      --h1-font-size: 3vh;
+      --h2-font-size: 3vh;
       --h3-font-size: 2.2vw;
       --font-size: 4vw;
     }
@@ -104,14 +115,13 @@
   @media screen and (max-width:200px) {
     :root 
     {
-      --h1-font-size: 1vh;
-      --h2-font-size: 1vh;
-      --h3-font-size: .5vh;
-      --font-size: .5vh;
+      --h1-font-size: 1.5vh;
+      --h2-font-size: 2vh;
+      --h3-font-size: .8vh;
+      --font-size: 1vh;
     }
   } 
   
-
 /* STUFF */
 
 a {

@@ -64,9 +64,9 @@
   right: var(--center);
   color: var(--theme-text);
   position: absolute;
-  left: 75.5%;
+  left: 65.5%;
   margin-left:-49.2vw;
-  width:50vw;
+  width:70vw;
 }
 
 .theme {

@@ -231,41 +231,41 @@ div {
 /* == ANIMATIONS == */
 
 @keyframes darksideTheme {
-  0% {
+  from {
     background: url("Csfondo.svg") repeat, #fff;
     filter: saturate(100%);
   }
-  100% {
+  to {
     background: url("Csfondo.svg") repeat, #1e1e1e;
     filter: saturate(0%);
   }
 }
 
 @keyframes darksideColor {
-  0% {
+  from {
     background: #fff;
   }
-  100% {
+  to {
     background: rgb(52, 52, 53);
   }
 }
 
 @keyframes darksideCard{
-  0% {
+  from {
     background-color: rgb(243, 243, 243);
   }
-  100% {
+  to {
     background-color: rgb(37, 37, 38);
   }
 }
 
 @keyframes darksideShadowCard {
-  0% {
+  from {
     color: #000;
     background-color: rgb(238, 238, 238);
   }
 
-  100% {
+  to {
     color: #fff;
     background-color:rgb(22, 22, 23);
     
@@ -274,33 +274,33 @@ div {
 }
 
 @keyframes lightsideTheme {
-  0% {
+  from {
     background: url("Csfondo.svg") repeat, #1e1e1e;
     filter: saturate(0%);
   }
-  100% {
+  to {
     background: url("Csfondo.svg") repeat, #fff;
     filter: saturate(100%);
   }
 }
 
 @keyframes lightsideColor {
-  0% {
+  from {
     background: rgb(52, 52, 53);
     
   }
-  100% {
+  to {
     background: #fff;
   }
 }
 
 @keyframes lightsideShadowCard {
-  0% {
+  from {
     color: #fff;
     background-color:rgb(22, 22, 23);
   }
 
-  100% {
+  to {
     color: #000;
     background-color: rgb(238, 238, 238);
   }
@@ -308,11 +308,11 @@ div {
 }
 
 @keyframes lightsideCard{
-  0% {
+  from {
     background-color: rgb(37, 37, 38);
   }
 
-  100% {
+  to {
     background-color: rgb(243, 243, 243);
   }
 }

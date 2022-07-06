@@ -46,7 +46,8 @@
   padding: var(--variable1);
   background-color: var(--theme-card);
   animation: lightsideCard 0.8s;
-  --webkit-animation: lightsideCard 0.8s;
+  -webkit-animation: lightsideCard 0.8s;
+  -moz-animation: lightsideCard 0.8s;
 }
 
 #backlighting {
@@ -56,7 +57,8 @@
   padding: var(--variable2);
   background: var(--theme-backlighting);
   animation: lightsideColor 0.8s;
-  --webkit-animation: lightsideColor 0.8s;
+  -webkit-animation: lightsideColor 0.8s;
+  -moz-animation: lightsideColor 0.8s;
 }
 
 #shadow {
@@ -72,7 +74,8 @@
   margin-left:-49.2vw;
   width:70vw;
   animation: lightsideShadowCard 0.8s;
-  --webkit-animation: lightsideShadowCard 0.8s;
+  -webkit-animation: lightsideShadowCard 0.8s;
+  -moz-animation: lightsideShadowCard 0.8s;
 }
 
 .theme {
@@ -81,7 +84,8 @@
   background: var(--theme-img-background);
   filter: saturate(var(--variable9));
   animation: lightsideTheme 0.8s;
-  --webkit-animation: lightsideTheme 0.8s;
+  -webkit-animation: lightsideTheme 0.8s;
+  -moz-animation: lightsideTheme 0.8s;
 }
 
 .emoji {
@@ -107,22 +111,26 @@
 
   .theme {
     animation: darksideTheme 0.8s;
-    --webkit-animation: darksideTheme 0.8s;
+    -webkit-animation: darksideTheme 0.8s;
+    -moz-animation: darksideTheme 0.8s;
   }
 
   #backlighting {
     animation: darksideColor 0.8s;
-    --webkit-animation: darksideColor 0.8s;
+    -webkit-animation: darksideColor 0.8s;
+    -moz-animation: darksideColor 0.8s;
   }
 
   #shadow {
     animation: darksideShadowCard 0.8s;
-    --webkit-animation: darksideShadowCard 0.8s;
+    -webkit-animation: darksideShadowCard 0.8s;
+    -moz-animation: darksideShadowCard 0.8s;
   }
 
   #card {
     animation: darksideCard 0.8s;
-    --webkit-animation: darksideCard 0.8s;
+    -webkit-animation: darksideCard 0.8s;
+    -moz-animation: darksideCard 0.8s;
   }
 }
 

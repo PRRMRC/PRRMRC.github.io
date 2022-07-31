@@ -97,7 +97,7 @@
   }
 
   svg {
-    fill: var(--color1);
+    fill: var(--color1) !important;
   }
 
   .theme {
@@ -324,5 +324,5 @@ a {
 svg {
   fill: var(--color2);
   width: 45px;
-  height: 55px
+  height: 55px;
 }

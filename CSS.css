@@ -12,6 +12,7 @@
     --variable9: 100%;
     --variable10: 6.7vh;
     --variable11: 8.1vh;
+    --variable12: 0%;
     --color1: #fff;
     --color2: #000;
     --color-background1: #fff;
@@ -84,10 +85,11 @@
       --theme-emoji: "🌕";
       --theme-backlighting: rgb(52, 52, 53);
       --variable9: 0%;
+      --variable12: 100%;
     }
   
     img {
-      fill: var(--color1) !important;
+        filter: invert(var(--variable12));
     }
   }
   
@@ -223,7 +225,7 @@
   }
   
   img {
-    filter: invert(100%);
+    filter: invert(var(--variable12));
     width: var(--variable10);
     height: var(--variable11);
   }

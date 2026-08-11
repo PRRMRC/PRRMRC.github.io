@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+https://prrmrc.github.io/sitemap.xml
